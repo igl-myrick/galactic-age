@@ -4,8 +4,12 @@ describe("ConvertedAge", () => {
   let newConversion;
 
   beforeEach(() => {
-    newConversion = new ConvertedAge();
+    newConversion = new ConvertedAge(20);
   });
+
+  test("should store a new number based on the object parameter", () => {
+    expect(newConversion.inputAge).toEqual(20);
+  })
 
   test("should store a new class with a mercuryFormula value", () => {
     expect(newConversion.mercuryFormula(20)).toEqual(83.333);
