@@ -38,4 +38,8 @@ describe("ConvertedAge.prototype.getAge", () => {
   test("should return a Mercury age based on parameters", () => {
     expect(newConversion.getAge("Mercury")).toEqual(83.333);
   });
+  
+  test("should return a Venus age based on parameters", () => {
+    expect(newConversion.getAge("Venus")).toEqual(32.258);
+  });
 });
