@@ -23,3 +23,15 @@ describe("ConvertedAge", () => {
     expect(newConversion.jupiterFormula(20)).toEqual(1.686);
   });
 });
+
+describe("ConvertedAge.prototype.getAge", () => {
+  let newConversion;
+
+  beforeEach(() => {
+    newConversion = new ConvertedAge(20);
+  });
+  
+  test("should return a Mercury age based on parameters", () => {
+    expect(newConversion.getAge("Mercury")).toEqual(83.333);
+  });
+});
