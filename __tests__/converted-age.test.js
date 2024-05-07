@@ -14,4 +14,8 @@ describe("ConvertedAge", () => {
   test("should store a class with an additional venusAge value", () => {
     expect(newConversion.venusAge).toEqual(32.258);
   });
+
+  test("should store a class with an additional marsAge value", () => {
+    expect(newConversion.marsAge).toEqual(10.638);
+  });
 });
