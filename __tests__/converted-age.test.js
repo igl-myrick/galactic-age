@@ -4,22 +4,22 @@ describe("ConvertedAge", () => {
   let newConversion;
 
   beforeEach(() => {
-    newConversion = new ConvertedAge(20);
+    newConversion = new ConvertedAge();
   });
 
-  test("should store a new class with a mercuryAge value", () => {
-    expect(newConversion.mercuryAge).toEqual(83.333);
+  test("should store a new class with a mercuryFormula value", () => {
+    expect(newConversion.mercuryFormula(20)).toEqual(83.333);
   });
 
-  test("should store an additional venusAge value", () => {
-    expect(newConversion.venusAge).toEqual(32.258);
+  test("should store an additional venusFormula value", () => {
+    expect(newConversion.venusFormula(20)).toEqual(32.258);
   });
 
-  test("should store an additional marsAge value", () => {
-    expect(newConversion.marsAge).toEqual(10.638);
+  test("should store an additional marsFormula value", () => {
+    expect(newConversion.marsFormula(20)).toEqual(10.638);
   });
 
-  test("should store an additional jupiterAge value", () => {
-    expect(newConversion.jupiterAge).toEqual(1.686);
+  test("should store an additional jupiterFormula value", () => {
+    expect(newConversion.jupiterFormula(20)).toEqual(1.686);
   });
 });
