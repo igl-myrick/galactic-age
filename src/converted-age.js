@@ -22,6 +22,8 @@ export default class ConvertedAge {
       return this.venusFormula(this.inputAge);
     } else if (planetToConvert.toLowerCase() === "mars") {
       return this.marsFormula(this.inputAge);
+    } else if (planetToConvert.toLowerCase() === "jupiter") {
+      return this.jupiterFormula(this.inputAge);
     } else {
       return "Invalid input";
     }
