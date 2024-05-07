@@ -42,6 +42,10 @@ describe("ConvertedAge.prototype.getAge", () => {
   test("should return a Venus age based on parameters", () => {
     expect(newConversion.getAge("Venus")).toEqual(32.258);
   });
+  
+  test("should return a Mars age based on parameters", () => {
+    expect(newConversion.getAge("Mars")).toEqual(10.638);
+  });
 
   test("should return an error if an invalid parameter is given", () => {
     expect(newConversion.getAge("Pluto")).toEqual("Invalid input");
