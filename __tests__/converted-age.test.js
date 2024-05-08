@@ -59,6 +59,7 @@ describe("ConvertedAge.prototype.getAge", () => {
 describe("ConvertedAge.prototype.findDifference", () => {
   
   test("should find the difference between a smaller and a larger number", () => {
+    let newConversion = new ConvertedAge(20);
     expect(newConversion.findDifference(20, 26)).toEqual(6);
   });
 });
