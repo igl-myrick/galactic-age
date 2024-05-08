@@ -55,3 +55,10 @@ describe("ConvertedAge.prototype.getAge", () => {
     expect(newConversion.getAge("Pluto")).toEqual("Invalid input");
   })
 });
+
+describe("ConvertedAge.prototype.findDifference", () => {
+  
+  test("should find the difference between a smaller and a larger number", () => {
+    expect(newConversion.findDifference(20, 26)).toEqual(6);
+  });
+});
