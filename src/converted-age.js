@@ -41,4 +41,9 @@ export default class ConvertedAge {
     const difference = this.findDifference(this.inputAge, numToCompare);
     return `${difference} Earth years have passed.\n${this.mercuryFormula(difference)} Mercury years have passed.\n${this.venusFormula(difference)} Venus years have passed.\n${this.marsFormula(difference)} Mars years have passed.\n${this.jupiterFormula(difference)} Jupiter years have passed.`
   }
+
+  untilBirthday(numToCompare) {
+    const difference = this.findDifference(this.inputAge, numToCompare);
+    return `${difference} Earth years have yet to pass.\n${this.mercuryFormula(difference)} Mercury years have yet to pass.\n${this.venusFormula(difference)} Venus years have yet to pass.\n${this.marsFormula(difference)} Mars years have yet to pass.\n${this.jupiterFormula(difference)} Jupiter years have yet to pass.`
+  }
 }
