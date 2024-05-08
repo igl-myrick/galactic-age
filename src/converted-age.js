@@ -36,4 +36,9 @@ export default class ConvertedAge {
       return num1 - num2;
     }
   }
+
+  sinceBirthday(numToCompare) {
+    const difference = this.findDifference(this.inputAge, numToCompare);
+    return `${difference} Earth years have passed.\n${this.mercuryFormula(difference)} Mercury years have passed.\n${this.venusFormula(difference)} Venus years have passed.\n${this.marsFormula(difference)} Mars years have passed.\n${this.jupiterFormula(difference)} Jupiter years have passed.`
+  }
 }
