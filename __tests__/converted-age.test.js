@@ -68,3 +68,11 @@ describe("ConvertedAge.prototype.findDifference", () => {
     expect(newConversion.findDifference(37, 30)).toEqual(7);
   });
 });
+
+describe("ConvertedAge.prototype.sinceBirthday", () => {
+
+  test("should return how many years have passed since a given birthday based on the inputted age", () => {
+    let newConversion = new ConvertedAge(56);
+    expect(newConversion.sinceBirthday(43)).toEqual("13 Earth years have passed.\n54.16 Mercury years have passed.\n20.96 Venus years have passed.\n6.91 Mars years have passed.\n1.09 Jupiter years have passed.");
+  })
+})
