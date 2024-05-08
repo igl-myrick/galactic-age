@@ -81,6 +81,6 @@ describe("ConvertedAge.prototype.untilBirthday", () => {
 
   test("should return how many years until a given birthday based on the inputted age", () => {
     let newConversion = new ConvertedAge(56);
-    expect(newConversion.untilBirthday(61)).toEqual("5 Earth years have yet to pass.\n20.833 Mercury years have yet to pass.\n8.065 Venus years have yet to pass.\n2.659 Mars years have yet to pass.\n0.422 Jupiter years have yet to pass.")
+    expect(newConversion.untilBirthday(61)).toEqual("5 Earth years have yet to pass.\n20.833 Mercury years have yet to pass.\n8.065 Venus years have yet to pass.\n2.66 Mars years have yet to pass.\n0.422 Jupiter years have yet to pass.")
   });
 });
