@@ -3,12 +3,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/styles.css";
 import ConvertedAge from "./converted-age.js";
 
-function handleConversionForm(e) {
-  e.preventDefault();
-  if (document.querySelector("p#conversion-result-p")) {
-    const pastResult = document.querySelector("p#conversion-result-p");
+function clearResult(element) {
+  if (document.querySelector(element)) {
+    const pastResult = document.querySelector(element);
     pastResult.remove();
   }
+}
+
+function handleConversionForm(e) {
+  e.preventDefault();
+  clearResult("p#conversion-result-p");
   const newP = document.createElement("p");
   newP.setAttribute("id", "conversion-result-p");
   const conversionDiv = document.getElementById("conversion-result");
@@ -22,10 +26,7 @@ function handleConversionForm(e) {
 
 function handleSinceBirthdayForm(e) {
   e.preventDefault();
-  if (document.querySelector("p#since-birthday-result-p")) {
-    const pastResult = document.querySelector("p#since-birthday-result-p");
-    pastResult.remove();
-  }
+  clearResult("p#since-birthday-result-p");
   const newP = document.createElement("p");
   newP.setAttribute("id", "since-birthday-result-p");
   const sinceBirthdayDiv = document.getElementById("since-birthday-result");
@@ -39,10 +40,7 @@ function handleSinceBirthdayForm(e) {
 
 function handleUntilBirthdayForm(e) {
   e.preventDefault();
-  if (document.querySelector("p#until-birthday-result-p")) {
-    const pastResult = document.querySelector("p#until-birthday-result-p");
-    pastResult.remove();
-  }
+  clearResult("p#until-birthday-result-p");
   const newP = document.createElement("p");
   newP.setAttribute("id", "until-birthday-result-p");
   const untilBirthdayDiv = document.getElementById("until-birthday-result");
