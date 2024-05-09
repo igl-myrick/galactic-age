@@ -10,8 +10,8 @@
       <div class="col-md-4" id="left">
         <h4>Find out your age on another planet:</h4>
         <form id="age-conversion">
-          <label for="user-age">Enter your age:</label>
-          <input id="user-age" type="number">
+          <label for="user-age-1">Enter your age:</label>
+          <input id="user-age-1" type="number">
           <label for="planet-selection">Choose a planet:</label>
           <select id="planet-selection">
             <option>Mercury</option>
@@ -21,9 +21,18 @@
           </select>
           <button type="submit">Submit</button>
         </form>
+        <div id="conversion-result"></div>
       </div>
       <div class="col-md-4" id="middle">
         <h4>Find out how many years have passed since a birthday, in other planets' years:</h4>
+        <form id="since-birthday">
+          <label for="user-age-2">Enter your age:</label>
+          <input id="user-age-2" type="number">
+          <label for="past-age">Enter a past age:</label>
+          <input id="past-age" type="number">
+          <button type="submit">Submit</button>
+        </form>
+        <div id="since-birthday-result"></div>
       </div>
       <div class="col-md-4" id="right">
         <h4>Find out how many years have yet to pass until a birthday, in other planets' years:</h4>
