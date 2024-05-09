@@ -37,5 +37,23 @@ function handleSinceBirthdayForm(e) {
   sinceBirthdayDiv.append(newP);
 }
 
+function handleUntilBirthdayForm(e) {
+  e.preventDefault();
+  if (document.querySelector("p#until-birthday-result-p")) {
+    const pastResult = document.querySelector("p#until-birthday-result-p");
+    pastResult.remove();
+  }
+  const newP = document.createElement("p");
+  newP.setAttribute("id", "until-birthday-result-p");
+  const untilBirthdayDiv = document.getElementById("until-birthday-result");
+
+  const userCurrentAge = document.getElementById("user-age-3").value;
+  const userFutureAge = document.getElementById("future-age").value;
+  const newConversion = new ConvertedAge(userCurrentAge);
+  newP.innerText = newConversion.untilBirthday(userFutureAge);
+  untilBirthdayDiv.append(newP);
+}
+
 document.getElementById("age-conversion").addEventListener("submit", handleConversionForm);
 document.getElementById("since-birthday").addEventListener("submit", handleSinceBirthdayForm);
+document.getElementById("until-birthday").addEventListener("submit", handleUntilBirthdayForm);
