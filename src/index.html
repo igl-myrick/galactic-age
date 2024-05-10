@@ -10,38 +10,50 @@
       <div class="col-md-4" id="left">
         <h4>Find out your age on another planet:</h4>
         <form id="age-conversion">
-          <label for="user-age-1">Enter your age:</label>
-          <input id="user-age-1" type="number">
-          <label for="planet-selection">Choose a planet:</label>
-          <select id="planet-selection">
-            <option>Mercury</option>
-            <option>Venus</option>
-            <option>Mars</option>
-            <option>Jupiter</option>
-          </select><br>
-          <button type="submit">Submit</button>
+          <div class="form-group">
+            <label for="user-age-1">Enter your age:</label>
+            <input id="user-age-1" type="number">
+          </div>
+          <div class="form-group">
+            <label for="planet-selection">Choose a planet:</label>
+            <select id="planet-selection">
+              <option>Mercury</option>
+              <option>Venus</option>
+              <option>Mars</option>
+              <option>Jupiter</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-light">Submit</button>
         </form>
         <div id="conversion-result"></div>
       </div>
       <div class="col-md-4" id="middle">
         <h4>Find out how many years have passed since a birthday, in other planets' years:</h4>
         <form id="since-birthday">
-          <label for="user-age-2">Enter your age:</label>
-          <input id="user-age-2" type="number">
-          <label for="past-age">Enter a past age:</label>
-          <input id="past-age" type="number"><br>
-          <button type="submit">Submit</button>
+          <div class="form-group">
+            <label for="user-age-2">Enter your age:</label>
+            <input id="user-age-2" type="number">
+          </div>
+          <div class="form-group">
+            <label for="past-age">Enter a past age:</label>
+            <input id="past-age" type="number">
+          </div>
+          <button type="submit" class="btn btn-light">Submit</button>
         </form>
         <div id="since-birthday-result"></div>
       </div>
       <div class="col-md-4" id="right">
         <h4>Find out how many years have yet to pass until a birthday, in other planets' years:</h4>
         <form id="until-birthday">
-          <label for="user-age-3">Enter your age:</label>
-          <input id="user-age-3" type="number">
-          <label for="future-age">Enter a future age:</label>
-          <input id="future-age" type="number"><br>
-          <button type="submit">Submit</button>
+          <div class="form-group">
+            <label for="user-age-3">Enter your age:</label>
+            <input id="user-age-3" type="number">
+          </div>
+          <div class="form-group">
+            <label for="future-age">Enter a future age:</label>
+            <input id="future-age" type="number">
+          </div>
+          <button type="submit" class="btn btn-light">Submit</button>
         </form>
         <div id="until-birthday-result"></div>
       </div>
