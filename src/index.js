@@ -73,7 +73,7 @@ function handleUntilBirthdayForm(e) {
   if ((userCurrentAge <= 0 || userFutureAge <= 0) || (userCurrentAge <= 0 && userFutureAge <= 0)) {
     displayError(untilBirthdayDiv, "Please enter a positive number.", "until-birthday-error");
   } else if (userCurrentAge >= userFutureAge) {
-    displayError(untilBirthdayDiv, "The second number must be higher than the first.", "until-birthday-error")
+    displayError(untilBirthdayDiv, "The second number must be higher than the first.", "until-birthday-error");
   } else {
     clearResult("p#until-birthday-error");
     const newConversion = new ConvertedAge(userCurrentAge);
