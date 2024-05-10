@@ -26,7 +26,7 @@ function handleConversionForm(e) {
   newP.setAttribute("id", "conversion-result-p");
   const conversionDiv = document.getElementById("conversion-result");
 
-  const userAge = document.getElementById("user-age-1").value;
+  const userAge = parseInt(document.getElementById("user-age-1").value);
   const userPlanet = document.getElementById("planet-selection").value;
   if (userAge <= 0) {
     displayError(conversionDiv, "Please enter a positive number.", "conversion-error");
@@ -46,8 +46,8 @@ function handleSinceBirthdayForm(e) {
   newP.setAttribute("id", "since-birthday-result-p");
   const sinceBirthdayDiv = document.getElementById("since-birthday-result");
 
-  const userCurrentAge = document.getElementById("user-age-2").value;
-  const userPastAge = document.getElementById("past-age").value;
+  const userCurrentAge = parseInt(document.getElementById("user-age-2").value);
+  const userPastAge = parseInt(document.getElementById("past-age").value);
   if ((userCurrentAge <= 0 || userPastAge <= 0) || (userCurrentAge <= 0 && userPastAge <= 0)) {
     displayError(sinceBirthdayDiv, "Please enter a positive number.", "since-birthday-error");
   } else if (userPastAge >= userCurrentAge) {
@@ -68,8 +68,8 @@ function handleUntilBirthdayForm(e) {
   newP.setAttribute("id", "until-birthday-result-p");
   const untilBirthdayDiv = document.getElementById("until-birthday-result");
 
-  const userCurrentAge = document.getElementById("user-age-3").value;
-  const userFutureAge = document.getElementById("future-age").value;
+  const userCurrentAge = parseInt(document.getElementById("user-age-3").value);
+  const userFutureAge = parseInt(document.getElementById("future-age").value);
   if ((userCurrentAge <= 0 || userFutureAge <= 0) || (userCurrentAge <= 0 && userFutureAge <= 0)) {
     displayError(untilBirthdayDiv, "Please enter a positive number.", "until-birthday-error");
   } else if (userCurrentAge >= userFutureAge) {
