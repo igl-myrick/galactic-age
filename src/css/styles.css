@@ -1,0 +1,28 @@
+body {
+  background-color: rgb(56, 71, 77);
+  color: white;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+select {
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#left {
+  border-right: solid;
+  height: 40vh;
+}
+
+#right {
+  border-left: solid;
+  height: 40vh;
+}
