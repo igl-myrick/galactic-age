@@ -46,8 +46,8 @@ function handleSinceBirthdayForm(e) {
   newP.setAttribute("id", "since-birthday-result-p");
   const sinceBirthdayDiv = document.getElementById("since-birthday-result");
 
-  const userCurrentAge = parseInt(document.getElementById("user-age-2").value);
-  const userPastAge = parseInt(document.getElementById("past-age").value);
+  const userCurrentAge = document.getElementById("user-age-2").value;
+  const userPastAge = document.getElementById("past-age").value;
   if ((userCurrentAge <= 0 || userPastAge <= 0) || (userCurrentAge <= 0 && userPastAge <= 0)) {
     displayError(sinceBirthdayDiv, "Please enter a positive number.", "since-birthday-error");
   } else if (userPastAge >= userCurrentAge) {
