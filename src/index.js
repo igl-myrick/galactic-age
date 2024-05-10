@@ -63,15 +63,23 @@ function handleSinceBirthdayForm(e) {
 function handleUntilBirthdayForm(e) {
   e.preventDefault();
   clearResult("p#until-birthday-result-p");
+  clearResult("p#until-birthday-error");
   const newP = document.createElement("p");
   newP.setAttribute("id", "until-birthday-result-p");
   const untilBirthdayDiv = document.getElementById("until-birthday-result");
 
   const userCurrentAge = document.getElementById("user-age-3").value;
   const userFutureAge = document.getElementById("future-age").value;
-  const newConversion = new ConvertedAge(userCurrentAge);
-  newP.innerText = newConversion.untilBirthday(userFutureAge);
-  untilBirthdayDiv.append(newP);
+  if ((userCurrentAge <= 0 || userFutureAge <= 0) || (userCurrentAge <= 0 && userFutureAge <= 0)) {
+    displayError(untilBirthdayDiv, "Please enter a positive number.", "until-birthday-error");
+  } else if (userCurrentAge >= userFutureAge) {
+    displayError(untilBirthdayDiv, "The second number must be higher than the first.", "until-birthday-error")
+  } else {
+    clearResult("p#until-birthday-error");
+    const newConversion = new ConvertedAge(userCurrentAge);
+    newP.innerText = newConversion.untilBirthday(userFutureAge);
+    untilBirthdayDiv.append(newP);
+  }
 }
 
 document.getElementById("age-conversion").addEventListener("submit", handleConversionForm);
