@@ -21,6 +21,7 @@ function displayError(elementToAppend, errorText, errorID) {
 function handleConversionForm(e) {
   e.preventDefault();
   clearResult("p#conversion-result-p");
+  clearResult("p#conversion-error");
   const newP = document.createElement("p");
   newP.setAttribute("id", "conversion-result-p");
   const conversionDiv = document.getElementById("conversion-result");
@@ -40,6 +41,7 @@ function handleConversionForm(e) {
 function handleSinceBirthdayForm(e) {
   e.preventDefault();
   clearResult("p#since-birthday-result-p");
+  clearResult("p#since-birthday-error");
   const newP = document.createElement("p");
   newP.setAttribute("id", "since-birthday-result-p");
   const sinceBirthdayDiv = document.getElementById("since-birthday-result");
