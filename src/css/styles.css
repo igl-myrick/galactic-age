@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(56, 71, 77);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/space.jpeg");
+  background-size: 100vw;
   color: white;
 }
 
